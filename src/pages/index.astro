@@ -1,32 +1,41 @@
 ---
-import CounterButton from '../components/CounterButton';
+import BuyList from '../components/BuyList.tsx';
+const buyList = [
+    'Controller',
+    'Bread',
+    'Water',
+    'Notebook',
+    'Math Book',
+    'Choco Bar',
+    'Milk'
+];
 ---
 
 <main>
-    <CounterButton client:only/>
+    <h1>Compras de la semana</h1>
+    <BuyList buyList={buyList} />
 </main>
 
 <style>
+
     main {
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        height: 100vh; 
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 20px;
+    }
+    
+    h1 {
+        margin-bottom: 10px; 
+        font-size: 1.5rem;
     }
 
-    button {
-        padding: 10px 20px; 
-        font-size: 1.2rem; 
-        border-radius: 5px; 
-        width: 200px; 
-        height: 60px; 
-        display: block; 
+    ul {
+        list-style-type: disc;
+        padding-left: 20px; 
+    }
+    
+    li {
+        margin-bottom: 5px; 
     }
 </style>
-
-
-
-
-
-
-
